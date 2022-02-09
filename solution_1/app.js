@@ -18,14 +18,25 @@ let x = 220
 let y = 208
 let height = 101
 let position_top = 180
+let position_left = 170
 
 
 
+window.onload = (event) => {
+
+    for (let step = 0; step < 4; step++) {
+        let element = document.createElement('div')
+        element.className = 'v'
+        element.style.left = `${position_left}px`
+        position_left += 200
+        document.getElementById('test').appendChild(element)
+
+
+    }
+
+};
 
 document.getElementById('btn').addEventListener('click', () => {
-
-    console.log("ww")
-
 
     for (let step = 0; step < 3; step++) {
 

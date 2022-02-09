@@ -14,6 +14,13 @@
     width: 600px;
 }
 
+.v {
+    border-left: 1px solid black;
+    height: 0px;
+    position: absolute;
+    top: 188px;
+}
+
 .v-one {
     border-left: 1px solid black;
     height: 0px;
