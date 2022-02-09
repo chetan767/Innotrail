@@ -25,3 +25,13 @@ td {
     cursor: pointer;
     border: 1px solid black;
 }
+
+.btn-float {
+    position: fixed;
+    font-size: x-large;
+    padding: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    top: 40%;
+    right: 5%;
+}

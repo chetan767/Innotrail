@@ -12,21 +12,28 @@ let colors = [
 
 ]
 
-window.onload = (event) => {
+let index = 0
 
-    let index = 0
+let x = 220
+let y = 208
+let height = 101
+let position_top = 180
 
-    let x = 220
-    let y = 208
 
 
-    let items = document.getElementsByClassName('tb-item')
 
-    for (let item of items) {
+document.getElementById('btn').addEventListener('click', () => {
 
-        // console.log(item)
-        item.style.backgroundColor = colors[index].bg
-        item.style.color = colors[index].color
+    console.log("ww")
+
+
+    for (let step = 0; step < 3; step++) {
+
+        let item = document.createElement('div')
+        item.className = 'tb-item'
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        item.style.backgroundColor = color.bg
+        item.style.color = color.color
         item.draggable = true
         item.ondragstart = "drag(event)"
         item.id = `id${index+1}`
@@ -34,26 +41,50 @@ window.onload = (event) => {
         item.style.position = 'absolute'
         item.style.left = `${x}px`
         item.style.top = `${y}px`
+        addDragEvents(item)
+
         x += 200
         if ((index + 1) % 3 == 0) {
             x = 220
             y += 100
+
+
+            for (line of document.getElementsByClassName('v')) {
+                line.style.height = `${height}px`
+
+            }
+            height += 100
+
+
+            let hr = document.createElement('hr')
+            hr.className = 'one'
+            hr.style.top = `${position_top}px`
+            position_top += 100
+            document.getElementById('test').appendChild(hr)
+
+            console.log(hr)
+
+            if (index + 1 == 3) {
+                let hr2 = document.createElement('hr')
+                hr2.className = 'one'
+                hr2.style.top = `${position_top}px`
+                position_top += 100
+                document.getElementById('test').appendChild(hr2)
+            }
         }
         index = index + 1
 
 
+        document.getElementById('test').appendChild(item)
     }
 
 
 
-};
+})
 
 
 
-
-let items = document.getElementsByClassName('tb-item')
-
-for (let item of items) {
+function addDragEvents(item) {
 
     item.addEventListener('dragstart', (event) => {
 

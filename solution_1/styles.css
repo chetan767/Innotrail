@@ -3,45 +3,20 @@
     padding: 20px 35px;
     border-radius: 20px;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     border: 1px solid black;
 }
 
 .one {
     position: absolute;
     left: 170px;
-    top: 180px;
-    color: black;
-    width: 600px;
-}
-
-.two {
-    position: absolute;
-    left: 170px;
-    top: 280px;
-    color: black;
-    width: 600px;
-}
-
-.three {
-    position: absolute;
-    left: 170px;
-    top: 380px;
-    color: black;
-    width: 600px;
-}
-
-.four {
-    position: absolute;
-    left: 170px;
-    top: 480px;
     color: black;
     width: 600px;
 }
 
 .v-one {
     border-left: 1px solid black;
-    height: 301px;
+    height: 0px;
     position: absolute;
     left: 170px;
     top: 188px;
@@ -49,7 +24,7 @@
 
 .v-two {
     border-left: 1px solid black;
-    height: 301px;
+    height: 0px;
     position: absolute;
     left: 370px;
     top: 188px;
@@ -57,7 +32,7 @@
 
 .v-three {
     border-left: 1px solid black;
-    height: 301px;
+    height: 0px;
     position: absolute;
     left: 570px;
     top: 188px;
@@ -65,8 +40,18 @@
 
 .v-four {
     border-left: 1px solid black;
-    height: 301px;
+    height: 0px;
     position: absolute;
     left: 770px;
     top: 188px;
+}
+
+.btn-float {
+    position: fixed;
+    font-size: x-large;
+    padding: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    top: 40%;
+    right: 10%;
 }
